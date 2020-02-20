@@ -1,4 +1,796 @@
 ﻿
-<div class="iframe-container">
-    <iframe id="output-frame-id" [src]="urlSafe" allowfullscreen></iframe>
-  </div>
+<!--<div [innerHTML]="htmlStr"></div>-->
+
+
+<!--<iframe id="iframe" [src]="src"></iframe>-->
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Julia und Raphael heiraten!</title>
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/vendor/jquery.countTo.js"></script>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="./assets/css/vendor/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="./assets/css/vendor/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="./assets/css/vendor/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="./assets/css/vendor/owl.carousel.min.css">
+	<link rel="stylesheet" href="./assets/css/vendor/owl.theme.default.min.css">
+	<!-- Lightbox -->
+	<link rel="stylesheet" href="./assets/css/vendor/lightbox.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+	
+	<link rel="icon" type="image/png" href="./assets/wedding/favicon2.png">
+
+	<style>
+
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		
+		#my {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		min-width: 100%;
+    	min-height: 100%;
+			overflow: hidden;
+		}
+		
+		
+		#myVideo1 {
+		width:100%;
+		height: 100%;
+		position: relative;
+		object-fit: cover;
+		}
+		
+		
+		
+		@media only screen and (max-width: 767px) {
+		#myVideo1 {
+			object-position: 20% 50%;
+		}
+		}
+		
+		@media only screen and (min-width: 1024px) {
+			#myVideo1 {
+				object-position: 20% 50%;
+			}
+		}
+		
+
+
+					
+
+		#my2 {
+		position: relative;
+		height: 400px;
+		width: 100%;
+		overflow: hidden;
+			
+		}
+
+		@media only screen and (min-width: 1024px) {
+		#my2 {
+			height: 500px;
+		}
+		}
+		
+		
+		#myVideo2 {
+		width:100%;
+		height: 100%;
+		position: relative;
+		object-fit: cover;
+		
+		object-position: 0% 70%;
+		}
+		
+		@media only screen and (max-width: 767px) {
+		#myVideo2 {
+			object-position: 40% 50%;
+		}
+		}
+		
+		
+		
+
+
+		
+		
+/*
+		
+		@media (max-width: 800px) {
+			#myVideo1 {
+				display: none; 
+			}
+		}
+		
+		@media (min-width: 801px) {
+			#myVideo2 {
+				display: none; 
+			}
+		}*/
+    </style>
+    
+
+
+    
+    
+	</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <div class="loader"></div>
+    	<div class="main">
+	
+
+
+	
+                <!-- Navigation -->
+                <!--
+                <nav class="navbar" data-spy="affix" data-options="scrolltop:false">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <!--<div id="logo"><a href="index.html">Belle</a></div>--><!--
+                            </div>
+                            <div class="col-xs-10 menu-2">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active">
+                                        <a class="page-scroll" href="#header">Home</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#events">Events</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#couple-story">Story</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#gallery">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#invitation">Contact</a>
+                                    </li>
+                                    <li class="has-dropdown">
+                                        <a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="about.html">About us</a></li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="rsvp.html">RSVP</a></li>
+                                            <li><a href="gallery-single.html">Single Albom</a></li>
+                                            <li><a href="blog.html">Blog page</a></li>
+                                            <li><a href="single-post.html">Post with aside</a></li>
+                                            <li><a href="single-post-2.html">Post without aside</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+                <!-- Header -->
+                <section id="header" class="section-gray cover" data-parallax="scroll" style="overflow: hidden" >
+        
+        
+                
+                    <div class="overlay"></div>
+                    <div id="my">
+                    <video  src="./assets/weddingfinal.mp4"  id="myVideo1" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+                    
+        
+        
+                    </video>
+                    </div>
+        
+                    
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="display-t">
+                                    <div class="display-tc animated">
+                                        <h1>Save the Date</h1>
+                                        <div class="banner-text">
+                                            <span class="banner-text_city">WIESLOCH</span>
+                                            <span class="banner-text_names">Julia &amp; Raphael</span>
+                                            <span class="banner-text_date">12.09.2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </section>
+                <!-- Section About-us -->
+
+               
+                <section id="couple" class="section couple section-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                    <h2>Liebe Gäste</h2>
+                                    <p style="font-size: 22px; color: black">Wir heiraten!</p>
+                                    <p style="color: black">Bitte gebt uns frühzeitig Rückmeldung, ob ihr an diesem Termin mitfeiern könnt.</p>
+                                </div>
+                            </div>
+                            <div class="row couple-wrap">
+                              <div class="groom-wrap col-md-6 clearfix">
+                                    <div class="groom">
+                                        <img src="./assets/julia2.jpg" alt="groom" class="img-responsive">
+                                    </div>
+                                    <div class="desc-groom">
+                                        <h3>Julia</h3>
+                                        
+                                    </div>
+                                </div>
+                                <p class="heart text-center"><i class="icon-heart2"></i></p>
+                                <div class="bride-wrap col-md-6" style="padding-top=30px">
+                                    <div class="bride" >
+                                        <img src="./assets/raphael.jpg" alt="groom" class="img-responsive">
+                                    </div>
+                                    <div class="desc-bride">
+                                        <h3>Raphael</h3>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section Countdown -->
+                    <section class="countdown bg section text-center">
+
+
+                            <div class="overlay"></div>
+                            <div class="container">
+                                    
+    
+                                <div class="row">
+                                    <div class="col-md-12 text-center" style="margin-bottom: 2em;">
+                                        <h2 style="margin-bottom: 1em;">Der große Tag</h2>
+                                        <p style="font-size: 30px; color: black; margin-bottom: 1em; border: 2px dotted black;">12. September 2020</p>
+                
+                                    </div>
+                                    
+    
+                                    
+                                    <div class="col-sm-12">
+                                    <div id="timer" class="timer text-center">
+                                               
+ 
+                                    <div class="timer-item timer-item_text">
+                                            Nur noch...
+                                    </div>
+                                    <countdown (reached)="callback($event)" [text]="text" units="Year | Month | Days | Hours | Minutes | Seconds"  end="September 12, 2020"></countdown>
+
+                                    
+                                    <div class="timer-item timer-item_text">
+                                        ...bis zur Hochzeit!
+                                    </div>
+                                </div>
+                            </div>
+
+                                </div>
+                            </div>
+                    </section>
+                    <!-- Section Events -->
+                    <!--
+                    <section id="events" class="events-accordion section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                    <span>Unsere Feier</span>
+                                    <h2>Wedding Events</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="panel-group" id="accordion-img">
+                                        <div class="panel panel-default">
+                                            <div id="collapse10" class="panel-collapse collapse in">
+                                                <img src="img/event1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div id="collapse20" class="panel-collapse collapse">
+                                                <img src="img/event2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div id="collapse30" class="panel-collapse collapse">
+                                                <img src="img/event3.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div id="collapse40" class="panel-collapse collapse">
+                                                <img src="img/event4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div id="collapse50" class="panel-collapse collapse">
+                                                <img src="img/event5.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3>November 28th, 2019 New York, USA</h3>
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                5:30pm Celebration</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse in">
+                                                <div class="panel-place">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span>5th Ave, NY</span>
+                                                </div>
+                                                <div class="panel-body">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                6:00pm Cocktail hour</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse2" class="panel-collapse collapse">
+                                                <div class="panel-place">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span>5th Ave, NY</span>
+                                                </div>
+                                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                7:00pm Call to dinner</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse3" class="panel-collapse collapse">
+                                                <div class="panel-place">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span>5th Ave, NY</span>
+                                                </div>
+                                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                8:45pm Cake cutting</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse4" class="panel-collapse collapse">
+                                                <div class="panel-place">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span>5th Ave, NY</span>
+                                                </div>
+                                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                                9:00pm Party dance</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse5" class="panel-collapse collapse">
+                                                <div class="panel-place">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span>5th Ave, NY</span>
+                                                </div>
+                                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section Our-story -->
+                    
+                    <section id="couple-story" class="section couple-story section-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                    <span></span>
+                                    <h2>Unsere Geschichte</h2>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-0">
+                                    <ul class="timeline animate-box">
+            
+                                        <li class="timeline-item animate-box">
+                                            <div class="timeline-badge">
+                                                <img src="./assets/golden.jpg" alt="">
+                                            </div>
+                                          <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h3 class="timeline-title">Kennenlernen</h3>
+                                                    <span class="date">9. Juli 2011</span>
+                                                </div>
+                                            <div class="timeline-body">
+                                                    <p>Los Angeles / San Francisco, USA</p>
+                                              </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item animate-box">
+                                            <div class="timeline-badge">
+                                                <img src="./assets/main.jpg" alt="">
+                                            </div>
+                                          <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h3 class="timeline-title">Beziehung</h3>
+                                                    <span class="date">4. Februar 2012</span>
+                                                </div>
+                                            <div class="timeline-body">
+                                                    <p>Frankfurt, Deutschland</p>
+                                              </div>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item animate-box">
+                                            <div class="timeline-badge">
+                                                <img src="./assets/trolltunga.jpg" alt="">
+                                            </div>
+                                          <div class="timeline-panel">
+                                                <div class="timeline-heading">
+                                                    <h3 class="timeline-title">Verlobung</h3>
+                                                    <span class="date">5. August 2019</span>
+                                                </div>
+                                            <div class="timeline-body">
+                                                    <p>Trolltunga, Norwegen</p>
+                                              </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <!-- Section Gallery -->
+                    <!--
+                    <section id="gallery" class="section section-gray gallery">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                    <span>Our Memories</span>
+                                    <h2>Wedding Gallery alboms</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="button-group filters-button-group">
+                                        <button class="button is-checked" data-filter="*">All</button>
+                                        <button class="button" data-filter=".moments">moments</button>
+                                        <button class="button" data-filter=".friends">friends</button>
+                                        <button class="button" data-filter=".banguet">banguet</button>
+                                        <button class="button" data-filter=".family">family</button>
+                                        <button class="button" data-filter=".party">party</button>
+                                    </div>
+                                    <div class="grid grid--margin">
+                                        <div class="grid-sizer"></div>
+                                        <div class="grid-item grid-item--width moments friends">
+                                            <a href="img/gallery-1.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-1.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item moments banguet party">
+                                            <a href="img/gallery-2.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-2.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item friends moments party">
+                                            <a href="img/gallery-3.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-3.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item banguet family">
+                                            <a href="img/gallery-7.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-7.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item friends family">
+                                            <a href="img/gallery-5.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-5.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item family party">
+                                            <a href="img/gallery-10.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-10.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item moments family">
+                                            <a href="img/gallery-7.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-7.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item banguet family">
+                                            <a href="img/gallery-8.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-8.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                        <div class="grid-item friends party">
+                                            <a href="img/gallery-9.jpg" data-lightbox="roadtrip">
+                                                <img src="img/gallery-9.jpg" alt="gallery">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <a href="gallery-single.html" class="btn-primary btn-lg">View all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section Counter -->
+                    
+                    
+                    <!-- Section Testimonials -->
+                    <!--
+                    <section id="testimonials" class="section testimonials">
+                        <div class="container">
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-md-12 text-center heading">
+                                        <span>Best Wishes</span>
+                                        <h2>Friends Wishes</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="wrap-testimony">
+                                            <div class="owl-carousel-fullwidth">
+                                                <div class="item">
+                                                    <div class="testimony-slide active text-center">
+                                                        <figure>
+                                                            <img src="img/friend-1.jpg" alt="user">
+                                                        </figure>
+                                                        <span>Andrew Brewer</span>
+                                                        <blockquote>
+                                                            <p>"With warm congratulations to a very special pair. May you always find in each other the love, laughter and happiness that only partners in life share!"</p>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="testimony-slide active text-center">
+                                                        <figure>
+                                                            <img src="img/friend-2.jpg" alt="user">
+                                                        </figure>
+                                                        <span>Theodore Hamilton</span>
+                                                        <blockquote>
+                                                            <p>"True love stories never end! Happy wedding day and may there be many more chapters in the wonderful story of your love for one another."</p>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="testimony-slide active text-center">
+                                                        <figure>
+                                                            <img src="img/friend-3.jpg" alt="user">
+                                                        </figure>
+                                                        <span>Maria J. Taylor</span>
+                                                        <blockquote>
+                                                            <p>"A wedding wish for two special person: love is best when shared by two. You know that together you are stronger, together you are one. Have a wonderful married life!"</p>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section Video invitation -->
+                    <!--
+                    <section id="invitation" class="section invitation section-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                    <h2>Video invitation</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-wrapper col-md-6">
+                                    <form action="form.php" id="contact-form" class="form-horizontal" method="post">
+                                        <h3 class="text-center">Will you be attending the wedding?</h3>
+                                        <div class="row">
+                                            <div class="form-field switch-field col-sm-12">
+                                                <input type="radio" name="rdo" id="yes" value="Yes"/>
+                                                <input type="radio" name="rdo" id="no" value="No"/>
+                                                <div class="switch">
+                                                    <label for="yes">Yes</label>
+                                                    <label for="no">No</label>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div id="name-field" class="form-field col-sm-6">
+                                                <label for="form-name" class="control-label">Your name*</label>
+                                                <input type="text" class="form-control" id="form-name" name="form-name" required="">
+                                            </div>
+                                            <div id="email-field" class="form-field col-sm-6">
+                                                <label for="form-email" class="control-label">Email*</label>
+                                                <input type="email" class="form-control" id="form-email" name="form-email" required="">
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center">Who else is comming with you?</h3>
+                                        <div class="row">
+                                            <div id="guest-name-field" class="form-field col-sm-8">
+                                                <label for="form-guest-name" class="control-label">Guest name</label>
+                                                <input type="text" class="form-control" id="form-guest-name" name="form-name">
+                                            </div>
+                                            <div class="form-field col-sm-4 text-center">
+                                                <button type="button" class="add-button">Add guest</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="guest-list form-field col-sm-12"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 text-center">
+                                                <button type="submit" class="btn-primary btn-lg send-button">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+            
+                                <div class="col-md-6">
+                                    <div class="video bg">
+                                        <a href="https://www.youtube.com/watch?v=KPi8uXHRfYg" class="popup-youtube">
+                                            <i class="fa fa-youtube-play fa-5x"></i>
+                                        </a>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section banner-bottom -->
+                    
+                    <section class="bg section banner banner_bottom section-gray">
+                        <div class="container" style="margin-bottom: 15px">
+                            <div class="row">
+                                <div class="col-md-12 text-center heading">
+                                        <h2>Hochzeitswein geerntet</h2>
+                                    <span>345 Tage vor der Hochzeit</span>
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div id="my2">
+
+
+                            <video  src="./assets/erntefinal.mp4" id="myVideo2" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+ 
+                        </div>
+            
+                    </section>
+                    
+                    
+                    
+                    <section id="counter" class="section bg counter section-gray">
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <div class="row">
+                                                <div class="col-md-12 text-center heading">
+                                    <span></span>
+                                    <h2>Statistik</h2>
+                                    <p></p>
+                                </div>
+                                <div class="animate-box feature-center">
+                                    <div class="feature-center">
+                                        <span class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                        <span class="counter-value js-counter dayssince" data-from="0" data-to=[to] data-speed="5000" data-refresh-interval="50">1</span>
+                                        <span class="counter-label">Gemeinsame Tage Bisher</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                    
+                    <!-- Footer -->
+            
+                    <footer class="section footer section-gray">
+                        <div class="container">
+                            <div class="row copyright">
+            
+                                <div class="col-md-12 text-center heading">
+                                    <span>Weitere Informationen folgen</span>
+                                    <h2>Wir freuen uns!</h2>
+                                    
+                    
+            
+                                </div>
+            
+                            </div>
+                        </div>
+                    </footer>
+            </div>
+
+            <!-- countTo -->
+
+
+
+
+
+</body>
+</html>

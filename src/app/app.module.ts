@@ -8,6 +8,7 @@ import { fakeBackendProvider } from './_helpers';
 
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
+import { CountdownModule } from "ng2-date-countdown";
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
@@ -18,7 +19,8 @@ import { LoginComponent } from './login';
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        appRoutingModule
+        appRoutingModule,
+        CountdownModule
     ],
     declarations: [
         AppComponent,

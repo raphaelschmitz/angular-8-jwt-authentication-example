@@ -27,12 +27,20 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
             password: ['', Validators.required]
         });
 
         // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'].replace('/','');;
+        console.log(this.returnUrl); // Print the parameter to the console. 
+        const urlParams = new URLSearchParams(this.returnUrl);
+        console.log(urlParams.get('c'));
+        if (urlParams.get('c') != null) {
+        this.f.password.setValue(urlParams.get('c'));
+        this.onSubmit()
+        }
+   
+
     }
 
     // convenience getter for easy access to form fields
@@ -47,7 +55,8 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+       
+        this.authenticationService.login("test", this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
