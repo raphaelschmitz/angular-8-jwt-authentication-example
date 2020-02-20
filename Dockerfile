@@ -21,6 +21,6 @@ RUN npm install -g @angular/cli@7.3.9
 COPY . /app
 
 # start app
-CMD ng serve --host 0.0.0.0
+CMD ng build --host 0.0.0.0
 
 ENV PORT 4200
